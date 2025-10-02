@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>For – E2: Suma de los últimos 5</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<script>
+  let sumaUltimos5 = 0;
+  document.write("<h2>For – Suma de los últimos 5 valores</h2>");
+  for (let i = 1; i <= 10; i++) {
+    const v = parseFloat(prompt("Valor " + i + ":"));
+    if (i > 5 && !Number.isNaN(v)) sumaUltimos5 += v;
+  }
+  document.write("<strong>Suma de los últimos 5:</strong> " + sumaUltimos5 + "<br>");
+</script>
+<p><a href="../index.html">← Volver</a></p>
+</body>
+</html>

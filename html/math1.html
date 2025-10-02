@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Math – E1: Potencia cúbica</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+<script>
+  const n = parseFloat(prompt("Ingrese un número:"));
+  document.write("<h2>Math – Tercera potencia</h2>");
+  if (Number.isNaN(n)) {
+    document.write("Valor inválido.<br>");
+  } else {
+    const cubo = Math.pow(n, 3); 
+    document.write("Número: " + n + "<br>");
+    document.write("Cubo (n^3): <strong>" + cubo + "</strong><br>");
+  }
+</script>
+
+<p><a href="../index.html">← Volver</a></p>
+</body>
+</html>

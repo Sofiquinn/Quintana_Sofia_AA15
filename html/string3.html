@@ -1,0 +1,11 @@
+<!DOCTYPE html><html lang="es"><head>
+<meta charset="utf-8"><title>String – E3</title><meta name="viewport" content="width=device-width, initial-scale=1">
+</head><body><script>
+  const fuente = prompt("Ingrese el texto (fuente):") || "";
+  const clave = prompt("Ingrese la clave a buscar:") || "";
+  const pos = fuente.indexOf(clave);
+  document.write("<h2>Clase String – E3</h2>");
+  if (clave === "") document.write("Clave vacía.<br>");
+  else if (pos !== -1) document.write(`Encontrada en posición inicial: <strong>${pos+1}</strong><br>`);
+  else document.write("La clave NO está en el texto.<br>");
+</script><p><a href="../index.html">← Volver</a></p></body></html>

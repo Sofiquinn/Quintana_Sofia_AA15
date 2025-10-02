@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Acumulador – E3: Sueldos y total</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<script>
+  let i = 1, entre100y300 = 0, masDe300 = 0, total = 0;
+  while (i <= 5) {
+    const s = parseFloat(prompt("Sueldo del empleado " + i + " ($100..$500):"));
+    if (!Number.isNaN(s)) {
+      total += s;
+      if (s <= 300) entre100y300++;
+      else masDe300++;
+    }
+    i++;
+  }
+  document.write("<h2>Sueldos</h2>");
+  document.write("Entre $100 y $300: " + entre100y300 + "<br>");
+  document.write("Más de $300: " + masDe300 + "<br>");
+  document.write("Gasto total en sueldos: $" + total.toFixed(2) + "<br>");
+</script>
+<p><a href="../index.html">← Volver</a></p>
+</body>
+</html>

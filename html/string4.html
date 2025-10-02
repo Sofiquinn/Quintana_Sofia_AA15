@@ -1,0 +1,11 @@
+<!DOCTYPE html><html lang="es"><head>
+<meta charset="utf-8"><title>String – E4</title><meta name="viewport" content="width=device-width, initial-scale=1">
+</head><body><script>
+  const entrada = (prompt("Ingrese una palabra o texto:") || "");
+  const normal = entrada.toLowerCase().replace(/\s+/g,"");
+  const invertida = normal.split("").reverse().join("");
+  const esPal = normal.length>0 && normal === invertida;
+  document.write("<h2>Clase String – E4</h2>");
+  document.write("Texto: "+entrada+"<br>");
+  document.write(esPal ? "<strong>Es palíndromo</strong><br>" : "No es palíndromo<br>");
+</script><p><a href="../index.html">← Volver</a></p></body></html>

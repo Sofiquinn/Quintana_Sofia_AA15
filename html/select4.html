@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>SELECT – E4: Examen múltiple</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+  <h2>Examen múltiple choice</h2>
+
+  <ol>
+    <li>
+      Capital de Argentina:
+      <select class="preg" data-ok="b">
+        <option value="">—</option>
+        <option value="a">Córdoba</option>
+        <option value="b">Buenos Aires</option>
+        <option value="c">Rosario</option>
+      </select>
+    </li>
+    <li>
+      2 + 2 =
+      <select class="preg" data-ok="c">
+        <option value="">—</option>
+        <option value="a">3</option>
+        <option value="b">5</option>
+        <option value="c">4</option>
+      </select>
+    </li>
+    <li>
+      Lenguaje que corre en el navegador:
+      <select class="preg" data-ok="a">
+        <option value="">—</option>
+        <option value="a">JavaScript</option>
+        <option value="b">SQL</option>
+        <option value="c">Python</option>
+      </select>
+    </li>
+    <li>
+      Planeta conocido como “planeta rojo”:
+      <select class="preg" data-ok="b">
+        <option value="">—</option>
+        <option value="a">Venus</option>
+        <option value="b">Marte</option>
+        <option value="c">Mercurio</option>
+      </select>
+    </li>
+  </ol>
+
+  <button type="button" id="corregir">Corregir</button>
+  <p id="resultado"></p>
+
+  <script>
+    document.getElementById('corregir').addEventListener('click', () => {
+      const selects = Array.from(document.querySelectorAll('select.preg'));
+      let correctas = 0, incorrectas = 0;
+
+      selects.forEach(s => {
+        const ok = s.dataset.ok;
+        const val = s.value;
+        if (!val) return; 
+        if (val === ok) correctas++; else incorrectas++;
+      });
+
+      const totalRespondidas = correctas + incorrectas;
+      document.getElementById('resultado').textContent =
+        `Respondidas: ${totalRespondidas} | Correctas: ${correctas} | Incorrectas: ${incorrectas}`;
+    });
+  </script>
+
+  <p><a href="../index.html">← Volver</a></p>
+</body>
+</html>

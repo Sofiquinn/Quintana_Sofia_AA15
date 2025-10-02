@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>FORM/TEXT/BUTTON – E2: Mayor de dos</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+  <h2>Mayor de dos números</h2>
+
+  <form id="form-mayor">
+    <label>Número 1: <input type="text" id="a" autocomplete="off"></label>
+    <label>Número 2: <input type="text" id="b" autocomplete="off"></label>
+    <button type="button" id="btn-mayor">Mostrar mayor</button>
+  </form>
+
+  <p id="salida"></p>
+
+  <script>
+    document.getElementById('btn-mayor').addEventListener('click', () => {
+      const a = parseFloat(document.getElementById('a').value);
+      const b = parseFloat(document.getElementById('b').value);
+      const out = document.getElementById('salida');
+
+      if (Number.isNaN(a) || Number.isNaN(b)) {
+        out.textContent = 'Ingrese dos números válidos.';
+        return;
+      }
+      if (a === b) out.textContent = 'Son iguales: ' + a;
+      else out.textContent = 'El mayor es: ' + (a > b ? a : b);
+    });
+  </script>
+
+  <p><a href="../index.html">← Volver</a></p>
+</body>
+</html>

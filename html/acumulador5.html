@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Acumulador  – E5: Múltiplos de 10 hasta 1500</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<script>
+  document.write("<h2>Múltiplos de 10 hasta 1500</h2>");
+  let n = 10, first = true;
+  while (n <= 1500) {
+    document.write((first ? "" : " - ") + n);
+    first = false;
+    n += 10;
+  }
+  document.write("<br>");
+</script>
+<p><a href="../index.html">← Volver</a></p>
+</body>
+</html>

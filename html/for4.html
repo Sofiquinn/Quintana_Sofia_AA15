@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>For – E4: Tabla de N (12 términos)</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<script>
+  const n = parseInt(prompt("Ingrese un valor entre 1 y 10:"), 10);
+  document.write("<h2>For – Tabla del " + n + " (12 términos)</h2>");
+  if (Number.isNaN(n) || n < 1 || n > 10) {
+    document.write("Valor inválido.<br>");
+  } else {
+    for (let i = 1; i <= 12; i++) {
+      document.write(n * i + (i < 12 ? " - " : ""));
+    }
+    document.write("<br>");
+  }
+</script>
+<p><a href="../index.html">← Volver</a></p>
+</body>
+</html>

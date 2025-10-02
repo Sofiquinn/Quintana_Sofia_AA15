@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Math – E2: Raíz cuadrada</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+<script>
+  const x = parseFloat(prompt("Ingrese un valor:"));
+  document.write("<h2>Math – Raíz cuadrada</h2>");
+  if (Number.isNaN(x) || x < 0) {
+    document.write("Valor inválido (debe ser número ≥ 0).<br>");
+  } else {
+    const raiz = Math.sqrt(x);
+    document.write("Valor: " + x + "<br>");
+    document.write("Raíz cuadrada: <strong>" + raiz + "</strong><br>");
+  }
+</script>
+
+<p><a href="../index.html">← Volver</a></p>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>FORM/TEXT/BUTTON – E1: Cubo con alert</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+  <h2>Cubo de un entero</h2>
+
+  <form id="form-cubo">
+    <label>Entero: <input type="text" id="num" autocomplete="off"></label>
+    <button type="button" id="btn-cubo">Calcular cubo</button>
+  </form>
+
+  <script>
+    document.getElementById('btn-cubo').addEventListener('click', () => {
+      const n = parseInt(document.getElementById('num').value, 10);
+      if (Number.isNaN(n)) {
+        alert('Ingrese un entero válido');
+        return;
+      }
+      alert('Cubo: ' + (n ** 3));
+    });
+  </script>
+
+  <p><a href="../index.html">← Volver</a></p>
+</body>
+</html>

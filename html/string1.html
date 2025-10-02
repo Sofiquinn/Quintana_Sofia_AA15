@@ -1,0 +1,14 @@
+<!DOCTYPE html><html lang="es"><head>
+<meta charset="utf-8"><title>String – E1</title><meta name="viewport" content="width=device-width, initial-scale=1">
+</head><body><script>
+  let cont = 0, nom;
+  do {
+    nom = prompt("Ingrese un nombre (Fin para terminar):");
+    if (nom === null) break;
+    if (nom === "Fin") break;
+    if (nom.trim() !== "") cont++;
+  } while (true);
+
+  document.write("<h2>Clase String – E1</h2>");
+  document.write("Cantidad de nombres ingresados: <strong>"+cont+"</strong><br>");
+</script><p><a href="../index.html">← Volver</a></p></body></html>

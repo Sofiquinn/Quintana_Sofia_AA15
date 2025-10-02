@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Estructuras switch – Traductor</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+<script>
+  const entrada = prompt("Ingrese una palabra (casa, mesa, perro, gato):");
+  const palabra = (entrada || "").trim().toLowerCase();
+  let traduccion;
+
+  switch (palabra) {
+    case "casa":
+      traduccion = "house";
+      break;
+    case "mesa":
+      traduccion = "table";
+      break;
+    case "perro":
+      traduccion = "dog";
+      break;
+    case "gato":
+      traduccion = "cat";
+      break;
+    default:
+      traduccion = null;
+  }
+
+  document.write("<h2>Estructuras switch – Traductor</h2>");
+  if (traduccion) {
+    document.write("Palabra: " + palabra + "<br>");
+    document.write("Traducción: <strong>" + traduccion + "</strong><br>");
+  } else {
+    document.write("Palabra no válida. Use: casa, mesa, perro o gato.<br>");
+  }
+</script>
+
+<p><a href="../index.html">← Volver al menú</a></p>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>For – E5: Tipos de triángulos</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<script>
+  let eq=0, iso=0, esc=0;
+  document.write("<h2>For – Clasificación de 4 triángulos</h2>");
+  for (let i = 1; i <= 4; i++) {
+    const a = parseFloat(prompt("Triángulo " + i + " – lado 1:"));
+    const b = parseFloat(prompt("Triángulo " + i + " – lado 2:"));
+    const c = parseFloat(prompt("Triángulo " + i + " – lado 3:"));
+    let tipo;
+    if (a === b && b === c) { tipo = "Equilátero"; eq++; }
+    else if (a === b || a === c || b === c) { tipo = "Isósceles"; iso++; }
+    else { tipo = "Escaleno"; esc++; }
+    document.write("Triángulo " + i + ": " + tipo + "<br>");
+  }
+  document.write("<hr>");
+  document.write("Equiláteros: " + eq + "<br>Isósceles: " + iso + "<br>Escalenos: " + esc + "<br>");
+  const min = Math.min(eq, iso, esc);
+  const menores = [];
+  if (eq === min) menores.push("Equiláteros");
+  if (iso === min) menores.push("Isósceles");
+  if (esc === min) menores.push("Escalenos");
+  document.write("<strong>Tipo(s) con menor cantidad:</strong> " + menores.join(" y ") + "<br>");
+</script>
+<p><a href="../index.html">← Volver</a></p>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>SELECT – E1: Pizza y precio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+  <h2>Pizza → precio</h2>
+
+  <label>Tipo de pizza:
+    <select id="pizza">
+      <option value="">— Elegí —</option>
+      <option value="5">Jamón y Queso ($5)</option>
+      <option value="6">Muzzarella ($6)</option>
+      <option value="7">Morrones ($7)</option>
+    </select>
+  </label>
+  <br>
+  <label>Precio:
+    <input type="text" id="precio" readonly>
+  </label>
+
+  <script>
+    const sel = document.getElementById('pizza');
+    const txt = document.getElementById('precio');
+    sel.addEventListener('change', () => {
+      const val = sel.value;
+      txt.value = val ? `$ ${Number(val).toFixed(2)}` : '';
+    });
+  </script>
+
+  <p><a href="../index.html">← Volver</a></p>
+</body>
+</html>

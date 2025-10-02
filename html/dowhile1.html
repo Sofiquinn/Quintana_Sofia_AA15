@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Do/While – E1: Acumular hasta 9999</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+<script>
+  let suma = 0, v;
+  document.write("<h2>Do/While – Acumular hasta ingresar 9999</h2>");
+  do {
+    v = parseFloat(prompt("Ingrese un valor (9999 para finalizar):"));
+    if (!Number.isNaN(v) && v !== 9999) suma += v;
+  } while (v !== 9999);
+
+  document.write("Suma acumulada: " + suma + "<br>");
+  if (suma === 0) document.write("La suma es CERO<br>");
+  else if (suma > 0) document.write("La suma es MAYOR a cero<br>");
+  else document.write("La suma es MENOR a cero<br>");
+</script>
+
+<p><a href="../index.html">← Volver</a></p>
+</body>
+</html>

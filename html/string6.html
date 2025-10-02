@@ -1,0 +1,17 @@
+<!DOCTYPE html><html lang="es"><head>
+<meta charset="utf-8"><title>String – E6</title><meta name="viewport" content="width=device-width, initial-scale=1">
+</head><body><script>
+  const s = prompt("Ingrese un string:") || "";
+  const mitad = s.slice(0, Math.floor(s.length/2));
+  const ultimo = s.length ? s[s.length-1] : "";
+  const inverso = s.split("").reverse().join("");
+  const conGuiones = s.split("").join("-");
+  const cantVocales = (s.match(/[aeiouáéíóúAEIOUÁÉÍÓÚ]/g) || []).length;
+
+  document.write("<h2>Clase String – E6</h2>");
+  document.write("a) Primera mitad: "+mitad+"<br>");
+  document.write("b) Último carácter: "+ultimo+"<br>");
+  document.write("c) Inverso: "+inverso+"<br>");
+  document.write("d) Con guiones: "+conGuiones+"<br>");
+  document.write("e) Cantidad de vocales: "+cantVocales+"<br>");
+</script><p><a href="../index.html">← Volver</a></p></body></html>

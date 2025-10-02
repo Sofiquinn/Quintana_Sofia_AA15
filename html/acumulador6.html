@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Acumulador  – E6: Comparar dos listas</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<script>
+  let i = 1, suma1 = 0, suma2 = 0;
+  while (i <= 3) {
+    const v = parseFloat(prompt("Lista 1 - valor " + i + ":"));
+    if (!Number.isNaN(v)) suma1 += v;
+    i++;
+  }
+  i = 1;
+  while (i <= 3) {
+    const v = parseFloat(prompt("Lista 2 - valor " + i + ":"));
+    if (!Number.isNaN(v)) suma2 += v;
+    i++;
+  }
+  document.write("<h2>Comparar listas</h2>");
+  document.write("Suma Lista 1: " + suma1 + "<br>");
+  document.write("Suma Lista 2: " + suma2 + "<br>");
+  if (suma1 > suma2) document.write("<strong>Lista 1 mayor</strong><br>");
+  else if (suma2 > suma1) document.write("<strong>Lista 2 mayor</strong><br>");
+  else document.write("<strong>Listas iguales</strong><br>");
+</script>
+<p><a href="../index.html">← Volver</a></p>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Funciones (retorno) – E1: Mayor de tres</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<script>
+  function mayorDeTres(a, b, c) {
+    return Math.max(a, b, c);
+  }
+
+  const n1 = parseInt(prompt("Entero 1:"), 10);
+  const n2 = parseInt(prompt("Entero 2:"), 10);
+  const n3 = parseInt(prompt("Entero 3:"), 10);
+
+  document.write("<h2>Mayor de tres</h2>");
+  if ([n1,n2,n3].some(Number.isNaN)) {
+    document.write("Debes ingresar enteros válidos.<br>");
+  } else {
+    document.write("Valores: " + n1 + ", " + n2 + ", " + n3 + "<br>");
+    document.write("Mayor: <strong>" + mayorDeTres(n1,n2,n3) + "</strong><br>");
+  }
+</script>
+<p><a href="../index.html">← Volver</a></p>
+</body>
+</html>

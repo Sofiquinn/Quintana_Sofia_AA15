@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Funciones (retorno) – E3: Cantidad de dígitos</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<script>
+  function cantidadDigitos(n) {
+    return String(n).length;
+  }
+
+  const n = parseInt(prompt("Ingrese un entero positivo (1..99999):"), 10);
+  document.write("<h2>Cantidad de dígitos</h2>");
+  if (Number.isNaN(n) || n < 1 || n > 99999) {
+    document.write("Valor inválido (debe ser 1..99999).<br>");
+  } else {
+    document.write("Número: " + n + "<br>");
+    document.write("Dígitos: <strong>" + cantidadDigitos(n) + "</strong><br>");
+  }
+</script>
+<p><a href="../index.html">← Volver</a></p>
+</body>
+</html>

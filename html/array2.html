@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Array – E2: Suma de dos vectores</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+<script>
+  const n = parseInt(prompt("Tamaño del vector (entero positivo):"), 10);
+  if (Number.isNaN(n) || n <= 0) {
+    document.write("Tamaño inválido.");
+  } else {
+    const a = new Array(n);
+    const b = new Array(n);
+    const c = new Array(n);
+
+    for (let i = 0; i < n; i++) {
+      a[i] = parseFloat(prompt("Vector A – posición " + i + ":"));
+    }
+    for (let i = 0; i < n; i++) {
+      b[i] = parseFloat(prompt("Vector B – posición " + i + ":"));
+    }
+    for (let i = 0; i < n; i++) {
+      c[i] = a[i] + b[i]; 
+    }
+
+    document.write("<h2>Array – Ejercicio 2</h2>");
+    document.write("A: [" + a.join(", ") + "]<br>");
+    document.write("B: [" + b.join(", ") + "]<br>");
+    document.write("C = A + B: [" + c.join(", ") + "]<br>");
+  }
+</script>
+
+<p><a href="../index.html">← Volver</a></p>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Funciones – Ejercicio 1</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+<script>
+  function mostrarRango() {
+    let menor = parseInt(prompt("Ingrese el MENOR entero:"), 10);
+    let mayor = parseInt(prompt("Ingrese el MAYOR entero:"), 10);
+
+    if (Number.isNaN(menor) || Number.isNaN(mayor)) {
+      document.write("Debe ingresar enteros válidos.<br>");
+      return;
+    }
+
+    if (menor > mayor) {
+      const tmp = menor; menor = mayor; mayor = tmp;
+    }
+
+    document.write("<h2>Funciones – Mostrar del menor al mayor</h2>");
+    for (let i = menor; i <= mayor; i++) {
+      document.write(i + (i < mayor ? " " : ""));
+    }
+    document.write("<br>");
+  }
+
+  mostrarRango();
+</script>
+
+<p><a href="../index.html">← Volver al menú</a></p>
+</body>
+</html>

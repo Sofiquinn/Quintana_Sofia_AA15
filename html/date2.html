@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Date – E2: Formato largo de fecha</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+<script>
+  function fechaLarga(fecha = new Date()) {
+    const dias = ["Domingo","Lunes","Martes","Miércoles","Jueves","Viernes","Sábado"];
+    const meses = ["Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto",
+                   "Septiembre","Octubre","Noviembre","Diciembre"];
+    const diaSem = dias[fecha.getDay()];
+    const diaNum = fecha.getDate();
+    const mesNom = meses[fecha.getMonth()];
+    const anio = fecha.getFullYear();
+    return `Hoy es ${diaSem} ${diaNum} de ${mesNom} de ${anio}`;
+  }
+
+  document.write("<h2>Clase Date – Formato largo</h2>");
+  document.write("<strong>" + fechaLarga() + "</strong><br>");
+</script>
+
+<p><a href="../index.html">← Volver</a></p>
+</body>
+</html>

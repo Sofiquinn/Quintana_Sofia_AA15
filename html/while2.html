@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>While – Múltiplos de 8 hasta 500</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+<script>
+  document.write("<h2>While – Múltiplos de 8 hasta 500</h2>");
+  let n = 8;
+  let primero = true;
+  while (n <= 500) {
+    document.write((primero ? "" : " - ") + n);
+    primero = false;
+    n += 8;
+  }
+  document.write("<br>");
+</script>
+
+<p><a href="../index.html">← Volver al menú</a></p>
+</body>
+</html>

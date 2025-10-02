@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>FORM/TEXT/BUTTON – E3: Concatenar nombre y apellido</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+  <h2>Nombre completo</h2>
+
+  <form id="form-nombre">
+    <label>Nombre: <input type="text" id="nombre" autocomplete="off"></label>
+    <label>Apellido: <input type="text" id="apellido" autocomplete="off"></label>
+    <button type="button" id="btn-concat">Concatenar</button>
+    <label>Resultado: <input type="text" id="resultado" readonly></label>
+  </form>
+
+  <script>
+    document.getElementById('btn-concat').addEventListener('click', () => {
+      const nombre = (document.getElementById('nombre').value || '').trim();
+      const apellido = (document.getElementById('apellido').value || '').trim();
+      document.getElementById('resultado').value =
+        nombre && apellido ? `${nombre} ${apellido}` : '';
+    });
+  </script>
+
+  <p><a href="../index.html">← Volver</a></p>
+</body>
+</html>

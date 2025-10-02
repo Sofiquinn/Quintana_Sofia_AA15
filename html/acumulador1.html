@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Acumulador – E1: Notas ≥7 y &lt;7</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<script>
+  let x = 1, may7 = 0, men7 = 0;
+  while (x <= 10) {
+    const n = parseFloat(prompt("Nota " + x + ":"));
+    if (!Number.isNaN(n)) (n >= 7 ? may7++ : men7++);
+    x++;
+  }
+  document.write("<h2>10 notas</h2>");
+  document.write("Mayores o iguales a 7: " + may7 + "<br>");
+  document.write("Menores a 7: " + men7 + "<br>");
+</script>
+<p><a href="../index.html">← Volver</a></p>
+</body>
+</html>

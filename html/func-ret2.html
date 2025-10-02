@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Funciones (retorno) – E2: Perímetro cuadrado</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<script>
+  function perimetroCuadrado(lado) {
+    return 4 * lado;
+  }
+
+  const lado = parseFloat(prompt("Lado del cuadrado:"));
+  document.write("<h2>Perímetro de un cuadrado</h2>");
+  if (Number.isNaN(lado)) {
+    document.write("Ingresa un número válido.<br>");
+  } else {
+    document.write("Lado: " + lado + "<br>");
+    document.write("Perímetro: <strong>" + perimetroCuadrado(lado) + "</strong><br>");
+  }
+</script>
+<p><a href="../index.html">← Volver</a></p>
+</body>
+</html>

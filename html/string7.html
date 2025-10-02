@@ -1,0 +1,9 @@
+<!DOCTYPE html><html lang="es"><head>
+<meta charset="utf-8"><title>String – E7</title><meta name="viewport" content="width=device-width, initial-scale=1">
+</head><body><script>
+  const oracion = prompt("Ingrese una oración:") || "";
+  const palabras = oracion.trim().split(/\s+/).filter(Boolean);
+  document.write("<h2>Clase String – E7</h2>");
+  if (!palabras.length) document.write("No se ingresaron palabras.<br>");
+  else palabras.forEach(p => document.write(p+"<br>"));
+</script><p><a href="../index.html">← Volver</a></p></body></html>

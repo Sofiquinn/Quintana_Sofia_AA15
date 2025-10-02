@@ -1,0 +1,9 @@
+<!DOCTYPE html><html lang="es"><head>
+<meta charset="utf-8"><title>String – E5</title><meta name="viewport" content="width=device-width, initial-scale=1">
+</head><body><script>
+  function tieneArroba(s){ return typeof s==="string" && s.includes("@"); }
+  const mail = prompt("Ingrese una dirección de email:") || "";
+  document.write("<h2>Clase String – E5</h2>");
+  document.write("Email: "+mail+"<br>");
+  document.write(tieneArroba(mail) ? "<strong>Contiene '@'</strong><br>" : "No contiene '@'<br>");
+</script><p><a href="../index.html">← Volver</a></p></body></html>

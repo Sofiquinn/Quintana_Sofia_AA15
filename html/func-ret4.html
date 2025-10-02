@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Funciones (retorno) – E4: Promedio de tres</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<script>
+  function promedio(a, b, c) {
+    return (a + b + c) / 3;
+  }
+
+  const n1 = parseInt(prompt("Entero 1:"), 10);
+  const n2 = parseInt(prompt("Entero 2:"), 10);
+  const n3 = parseInt(prompt("Entero 3:"), 10);
+
+  document.write("<h2>Promedio de tres enteros</h2>");
+  if ([n1,n2,n3].some(Number.isNaN)) {
+    document.write("Debes ingresar enteros válidos.<br>");
+  } else {
+    document.write("Valores: " + n1 + ", " + n2 + ", " + n3 + "<br>");
+    document.write("Promedio: <strong>" + promedio(n1,n2,n3) + "</strong><br>");
+  }
+</script>
+<p><a href="../index.html">← Volver</a></p>
+</body>
+</html>

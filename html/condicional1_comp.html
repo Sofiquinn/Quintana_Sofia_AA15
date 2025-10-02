@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Condicional compuesto – Ejercicio 1</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+<script>
+  const n1 = parseFloat(prompt("Ingrese el primer número:"));
+  const n2 = parseFloat(prompt("Ingrese el segundo número:"));
+
+  document.write("<h2>Ejercicio 1 – Dos números</h2>");
+  document.write("Primer número: " + n1 + "<br>");
+  document.write("Segundo número: " + n2 + "<br><br>");
+
+  if (n1 > n2) {
+    document.write("Suma: " + (n1 + n2) + "<br>");
+    document.write("Diferencia (primero - segundo): " + (n1 - n2) + "<br>");
+  } else {
+    document.write("Producto: " + (n1 * n2) + "<br>");
+    if (n2 !== 0) {
+      document.write("División (primero / segundo): " + (n1 / n2) + "<br>");
+    } else {
+      document.write("División (primero / segundo): indefinida (división por cero)<br>");
+    }
+  }
+</script>
+
+<p><a href="../index.html">← Volver al menú</a></p>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Funciones c/ parámetros – E1: Menor de tres</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+<script>
+  function mostrarMenor(a, b, c) {
+    const menor = Math.min(a, b, c);
+    document.write("<h2>Funciones con parámetros – Menor de tres</h2>");
+    document.write("Valores: " + a + ", " + b + ", " + c + "<br>");
+    document.write("<strong>Menor:</strong> " + menor + "<br>");
+  }
+
+  const n1 = parseInt(prompt("Ingrese el primer entero:"), 10);
+  const n2 = parseInt(prompt("Ingrese el segundo entero:"), 10);
+  const n3 = parseInt(prompt("Ingrese el tercer entero:"), 10);
+
+  if ([n1, n2, n3].some(Number.isNaN)) {
+    document.write("Debe ingresar enteros válidos.<br>");
+  } else {
+    mostrarMenor(n1, n2, n3);
+  }
+</script>
+
+<p><a href="../index.html">← Volver al menú</a></p>
+</body>
+</html>

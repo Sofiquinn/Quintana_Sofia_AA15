@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Funciones c/ parámetros – E2: Ordenar tres</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+<script>
+  function mostrarOrdenados(a, b, c) {
+    const arr = [a, b, c].sort((x, y) => x - y);
+    document.write("<h2>Funciones con parámetros – Ordenar de menor a mayor</h2>");
+    document.write("Ingresados: " + a + ", " + b + ", " + c + "<br>");
+    document.write("<strong>Ordenados:</strong> " + arr.join(" ") + "<br>");
+  }
+
+  const n1 = parseInt(prompt("Ingrese el primer entero:"), 10);
+  const n2 = parseInt(prompt("Ingrese el segundo entero:"), 10);
+  const n3 = parseInt(prompt("Ingrese el tercer entero:"), 10);
+
+  if ([n1, n2, n3].some(Number.isNaN)) {
+    document.write("Debe ingresar enteros válidos.<br>");
+  } else {
+    mostrarOrdenados(n1, n2, n3);
+  }
+</script>
+
+<p><a href="../index.html">← Volver al menú</a></p>
+</body>
+</html>

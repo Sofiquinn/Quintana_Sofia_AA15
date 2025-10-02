@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Date – E1: Cuatrimestre actual</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+<script>
+  const hoy = new Date();
+  const mes = hoy.getMonth(); 
+  let cuatri;
+  if (mes <= 3) cuatri = 1;        
+  else if (mes <= 7) cuatri = 2;   
+  else cuatri = 3;                 
+
+  document.write("<h2>Clase Date – Cuatrimestre actual</h2>");
+  document.write("Mes (0–11): " + mes + "<br>");
+  document.write("<strong>Estamos en el " + cuatri + "º cuatrimestre</strong><br>");
+</script>
+
+<p><a href="../index.html">← Volver</a></p>
+</body>
+</html>

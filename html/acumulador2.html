@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Acumulador  – E2: Promedio de alturas</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<script>
+  let i = 1, suma = 0;
+  while (i <= 5) {
+    const h = parseFloat(prompt("Altura " + i + " (m):"));
+    if (!Number.isNaN(h)) suma += h;
+    i++;
+  }
+  const promedio = suma / 5;
+  document.write("<h2>Alturas</h2>");
+  document.write("Promedio: " + promedio + " m<br>");
+</script>
+<p><a href="../index.html">← Volver</a></p>
+</body>
+</html>

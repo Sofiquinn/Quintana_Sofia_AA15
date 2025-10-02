@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Operadores lógicos (||) – Ejercicio 1</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+<script>
+  const n1 = parseFloat(prompt("Ingrese el primer número:"));
+  const n2 = parseFloat(prompt("Ingrese el segundo número:"));
+  const n3 = parseFloat(prompt("Ingrese el tercer número:"));
+
+  document.write("<h2>Operadores lógicos (||) – Ejercicio 1</h2>");
+  document.write("Valores: " + n1 + ", " + n2 + ", " + n3 + "<br>");
+
+  if (n1 < 10 || n2 < 10 || n3 < 10) {
+    document.write("<strong>Alguno de los números es menor a diez.</strong><br>");
+  } else {
+    document.write("Ninguno de los números es menor a diez.<br>");
+  }
+</script>
+
+<p><a href="../index.html">← Volver al menú</a></p>
+</body>
+</html>

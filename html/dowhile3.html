@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Do/While – E3: Censo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+<script>
+  document.write("<h2>Do/While – Censo</h2>");
+
+  let total = 0, varones = 0, mujeres = 0, varones1665 = 0;
+  let doc;
+
+  do {
+    doc = parseInt(prompt("Número de documento (0 para finalizar):"), 10);
+    if (Number.isNaN(doc)) continue;
+    if (doc === 0) break;
+
+    const edad = parseInt(prompt("Edad:"), 10);
+    let sexo = (prompt("Sexo (femenino/masculino):") || "").trim().toLowerCase();
+
+    total++;
+    if (sexo === "masculino" || sexo === "m") {
+      varones++;
+      if (!Number.isNaN(edad) && edad >= 16 && edad <= 65) varones1665++;
+    } else {
+      mujeres++;
+    }
+
+    document.write("Censado: Doc " + doc + " – Edad " + edad + " – Sexo " + sexo + "<br>");
+  } while (true);
+
+  document.write("<hr>");
+  document.write("a) Total de personas: <strong>" + total + "</strong><br>");
+  document.write("b) Cantidad de varones: <strong>" + varones + "</strong><br>");
+  document.write("c) Cantidad de mujeres: <strong>" + mujeres + "</strong><br>");
+  document.write("d) Varones entre 16 y 65 años: <strong>" + varones1665 + "</strong><br>");
+</script>
+
+<p><a href="../index.html">← Volver</a></p>
+</body>
+</html>

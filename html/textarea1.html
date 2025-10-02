@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Control TEXTAREA – Libro de visitas</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+  <h2>Libro de visitas</h2>
+
+  <form id="form-visitas">
+    <p>
+      <label>Nombre:
+        <input type="text" id="nombre" autocomplete="name">
+      </label>
+    </p>
+    <p>
+      <label>Email:
+        <input type="email" id="email" autocomplete="email">
+      </label>
+    </p>
+    <p>
+      <label>Comentarios:</label><br>
+      <textarea id="comentarios" rows="5" cols="40" placeholder="Escribí tus comentarios..."></textarea>
+    </p>
+    <button type="button" id="btn-mostrar">Mostrar datos</button>
+  </form>
+
+  <script>
+    document.getElementById('btn-mostrar').addEventListener('click', () => {
+      const nombre = (document.getElementById('nombre').value || '').trim();
+      const email = (document.getElementById('email').value || '').trim();
+      const comentarios = (document.getElementById('comentarios').value || '').trim();
+
+      alert(
+        "Datos ingresados:\n" +
+        "Nombre: " + nombre + "\n" +
+        "Email: " + email + "\n" +
+        "Comentarios:\n" + comentarios
+      );
+    });
+  </script>
+
+  <p><a href="../index.html">← Volver</a></p>
+</body>
+</html>

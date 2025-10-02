@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Array – E1: Acumulados y conteos</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+<script>
+  const v = new Array(8);
+  for (let i = 0; i < v.length; i++) {
+    v[i] = parseFloat(prompt("Ingrese valor " + (i + 1) + " de 8:"));
+  }
+
+  let sumaTotal = 0;
+  let sumaMayores36 = 0;
+  let cantMayores50 = 0;
+
+  for (let i = 0; i < v.length; i++) {
+    const n = v[i];
+    sumaTotal += n;                        
+    if (n > 36) sumaMayores36 += n;         
+    if (n > 50) cantMayores50++;            
+  }
+
+  document.write("<h2>Array – Ejercicio 1</h2>");
+  document.write("Vector: " + v.join(", ") + "<br>");
+  document.write("Suma total: " + sumaTotal + "<br>");
+  document.write("Suma de elementos > 36: " + sumaMayores36 + "<br>");
+  document.write("Cantidad de elementos > 50: " + cantMayores50 + "<br>");
+</script>
+
+<p><a href="../index.html">← Volver</a></p>
+</body>
+</html>

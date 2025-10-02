@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Control RADIO – Mayor de 18</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+  <h2>¿Sos mayor de 18 años?</h2>
+
+  <form id="form-edad">
+    <label><input type="radio" name="mayor" value="si"> Sí</label>
+    <label><input type="radio" name="mayor" value="no"> No</label>
+    <br>
+    <button type="button" id="btn-verificar">Verificar</button>
+  </form>
+
+  <script>
+    document.getElementById('btn-verificar').addEventListener('click', () => {
+      const elegido = document.querySelector('input[name="mayor"]:checked');
+      if (!elegido) {
+        alert('Seleccioná una opción.');
+        return;
+      }
+      if (elegido.value === 'si') {
+        alert('Acceso permitido: sos mayor de 18.');
+      } else {
+        alert('Acceso denegado: sos menor de 18.');
+      }
+    });
+  </script>
+
+  <p><a href="../index.html">← Volver</a></p>
+</body>
+</html>

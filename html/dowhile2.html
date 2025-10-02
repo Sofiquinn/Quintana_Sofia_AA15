@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Do/While – E2: Cuentas corrientes</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+<script>
+  document.write("<h2>Do/While – Cuentas corrientes</h2>");
+  let totalAcreedores = 0;
+
+  let numCuenta;
+  do {
+    numCuenta = parseInt(prompt("Número de cuenta (negativo para finalizar):"), 10);
+    if (Number.isNaN(numCuenta)) continue;
+    if (numCuenta < 0) break;
+
+    const cliente = (prompt("Nombre del cliente:") || "").trim();
+    const saldo = parseFloat(prompt("Saldo actual:"));
+
+    let estado;
+    if (saldo > 0) { estado = "Acreedor"; totalAcreedores += saldo; }
+    else if (saldo < 0) { estado = "Deudor"; }
+    else { estado = "Nulo"; }
+
+    document.write("Cuenta: " + numCuenta + " – Cliente: " + cliente +
+                   " – Saldo: " + saldo + " – Estado: <strong>" + estado + "</strong><br>");
+  } while (true);
+
+  document.write("<br>Total saldos acreedores: <strong>" + totalAcreedores.toFixed(2) + "</strong><br>");
+</script>
+
+<p><a href="../index.html">← Volver</a></p>
+</body>
+</html>

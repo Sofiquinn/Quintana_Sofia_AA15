@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>For – E1: Triángulos y superficies</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<script>
+  let cantMayor12 = 0;
+  document.write("<h2>For – 3 triángulos</h2>");
+  for (let i = 1; i <= 3; i++) {
+    const b = parseFloat(prompt("Triángulo " + i + " – base:"));
+    const h = parseFloat(prompt("Triángulo " + i + " – altura:"));
+    const s = (b * h) / 2;
+    if (s > 12) cantMayor12++;
+    document.write("Triángulo " + i + ": base=" + b + ", altura=" + h + ", superficie=" + s + "<br>");
+  }
+  document.write("<strong>Cantidad con superficie &gt; 12: " + cantMayor12 + "</strong><br>");
+</script>
+<p><a href="../index.html">← Volver</a></p>
+</body>
+</html>
